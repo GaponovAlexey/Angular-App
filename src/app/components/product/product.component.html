@@ -1,13 +1,12 @@
-<h2>Product</h2>
-<p>
-  Exercitation enim voluptate laborum aliqua veniam cupidatat officia eiusmod
-  nulla quis non irure laborum culpa. Veniam dolor sit velit laborum consectetur
-  occaecat cupidatat proident aliqua consequat. Do nostrud excepteur laboris non
-  aliquip dolor dolore qui. Eiusmod ad tempor sit amet qui sunt sunt enim
-  voluptate et aute. Eiusmod reprehenderit occaecat enim nostrud. Sunt labore
-  irure excepteur duis fugiat cupidatat aliquip consectetur ea. Irure deserunt
-  pariatur ut adipisicing labore aliquip sint cupidatat proident consequat elit.
-  Velit amet laboris dolore irure ad veniam reprehenderit proident reprehenderit
-  elit sit dolore incididunt Lorem. Ipsum excepteur aliqua ad ex quis deserunt
-  enim aliquip dolore exercitation.
-</p>
+<div class="py-4 px-6 border flex items-center flex-col mb-2">
+  <img [src]="product.image" [alt]="product.title" class="w-1/6 mb-2" />
+  <h2 class="mb-2 text-md text-center">{{ product.title }}</h2>
+  <p>Price: {{ product.price | currency : "$" }}</p>
+  <button
+  (click)="details = !details"
+  class="border py-2 px-4">{{details ? "Hide" : "Show"}} Details</button>
+  <div *ngIf="details">
+    {{ product.description }}
+    {{ product.rating }}
+  </div>
+</div>
