@@ -14,7 +14,7 @@ export class ProductsServices {
         fromObject: {limit: 5}
       })
     }).pipe(
-      delay(2000)
+      delay(1000)
     )
   }
 }

@@ -1,7 +1,7 @@
 <div class="py-4 px-6 border flex items-center flex-col mb-2">
   <img [src]="product.image" [alt]="product.title" class="w-1/6 mb-2" />
   <h2 class="mb-2 text-md text-center">{{ product.title }}</h2>
-  <p>Price: {{ product.price | currency : "$" }}</p>
+  <p>Price: {{ product.price | currency : "CAD" }}</p>
   <button
     [ngClass]="{
       'bg-blue-200': !details,
